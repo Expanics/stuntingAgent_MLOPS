@@ -1,0 +1,32 @@
+Sumber: Badan Pusat Statistik (BPS) - Rata-rata Harga Pangan 2024
+Data Harga Beras di Tingkat Penggilingan (Rata-rata Bulanan 2024)
+
+1. Beras Premium:
+   - Januari: Rp 13.112/kg
+   - Februari: Rp 13.079/kg
+   - Maret: Rp 13.207/kg
+   - April: Rp 13.047/kg
+   - Mei: Rp 13.001/kg
+   - Juni: Rp 13.268/kg
+   - Juli: Rp 13.524/kg
+   - Agustus: Rp 13.838/kg
+   - September: Rp 13.739/kg
+   - Oktober: Rp 13.641/kg
+   - November: Rp 13.550/kg
+
+2. Beras Medium:
+   - Januari: Rp 12.609/kg
+   - Maret: Rp 12.703/kg
+   - Juni: Rp 12.869/kg
+   - Agustus: Rp 13.458/kg
+   - November: Rp 13.195/kg
+
+3. Komoditas Lain (Estimasi Rata-rata Nasional 2024):
+   - Telur Ayam Ras: Rp 28.000 - Rp 32.000 per kg
+   - Daging Ayam Ras: Rp 35.000 - Rp 40.000 per kg
+   - Minyak Goreng Curah: Rp 15.000 - Rp 17.000 per liter
+   - Gula Pasir: Rp 16.000 - Rp 18.000 per kg
+   - Bawang Merah: Fluktuatif, kisaran Rp 25.000 - Rp 40.000 per kg
+   - Cabai Merah: Sangat fluktuatif, kisaran Rp 30.000 - Rp 80.000 per kg tergantung musim.
+
+Catatan: Harga dapat berbeda di setiap daerah dan pasar. Data ini adalah rata-rata nasional atau sampel representatif.
