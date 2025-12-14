@@ -1,7 +1,5 @@
 # 🥗 Stunting Agent - Edukator Gizi
 
-![Stunting Agent UI](https://images.unsplash.com/photo-1576091160550-2187d80a02ff?q=80&w=800&auto=format&fit=crop)
-
 ## 📝 Abstraksi
 
 Stunting masih menjadi masalah kesehatan masyarakat yang mendesak di Indonesia. Meskipun prevalensi stunting telah turun menjadi **19.8% pada tahun 2024**, angka ini masih perlu ditekan untuk mencapai target pemerintah sebesar 14%. Stunting tidak hanya berdampak pada pertumbuhan fisik, tetapi juga perkembangan kognitif anak, yang pada akhirnya mempengaruhi kualitas Sumber Daya Manusia (SDM) Indonesia di masa depan.
