@@ -185,6 +185,95 @@
             z-index: 20;
         }
 
+        /* --- News Card Styles --- */
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 20px;
+        }
+
+        .news-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-img-wrapper {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .news-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover .news-img {
+            transform: scale(1.05);
+        }
+
+        .news-content {
+            padding: 18px;
+        }
+
+        .news-tag {
+            display: inline-block;
+            background-color: #e3f2fd;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .news-content h3 {
+            font-size: 1.1em;
+            color: #222;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        .news-content p {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            font-size: 0.85em;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
         /* --- Info & Author Views --- */
         .info-card {
             background: white;
@@ -272,7 +361,8 @@
             cursor: pointer;
             transition: color 0.3s;
             font-size: 0.8em;
-            width: 33%;
+            width: 25%;
+            /* Adjusted for 4 items */
         }
 
         .nav-item.active {
@@ -463,6 +553,68 @@
                 </div>
             </div>
 
+            <!-- News View -->
+            <div id="news-view" class="view-section">
+                <!-- Removed redundant inner header -->
+
+                <div class="news-list">
+                    <!-- News Item 1 -->
+                    <a href="https://sehatnegeriku.kemkes.go.id/baca/rilis-media/20240320/1445176/angka-stunting-indonesia-turun-jadi-215-di-tahun-2023/"
+                        target="_blank" class="news-card-link">
+                        <div class="news-card">
+                            <div class="news-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=800&auto=format&fit=crop"
+                                    alt="Stunting Stats" class="news-img">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-tag">Statistik</span>
+                                <h3>Angka Stunting Nasional 2024 Turun Jadi 19.8%</h3>
+                                <p>Kementerian Kesehatan mengumumkan penurunan prevalensi stunting nasional yang
+                                    signifikan, melampaui target awal pemerintah.</p>
+                                <span class="read-more">Baca Selengkapnya &rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- News Item 2 -->
+                    <a href="https://www.bkkbn.go.id/berita-bkkbn-optimis-target-penurunan-stunting-14-persen-tercapai-di-2024"
+                        target="_blank" class="news-card-link">
+                        <div class="news-card">
+                            <div class="news-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop"
+                                    alt="Nutrition" class="news-img">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-tag">Program Pemerintah</span>
+                                <h3>BKKBN: Target Stunting 18% di 2025 Sangat Realistis</h3>
+                                <p>Kepala BKKBN optimis target baru dapat tercapai melalui program 'Makan
+                                    Bergizi Gratis' yang menyasar ibu hamil dan balita.</p>
+                                <span class="read-more">Baca Selengkapnya &rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- News Item 3 -->
+                    <a href="https://www.antaranews.com/berita/3986211/pemerintah-fokus-intervensi-stunting-di-12-provinsi-prioritas"
+                        target="_blank" class="news-card-link">
+                        <div class="news-card">
+                            <div class="news-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=800&auto=format&fit=crop"
+                                    alt="Health Check" class="news-img">
+                            </div>
+                            <div class="news-content">
+                                <span class="news-tag">Daerah</span>
+                                <h3>Fokus Intervensi Gizi di 6 Provinsi Prioritas</h3>
+                                <p>Pemerintah gencar melakukan intervensi gizi spesifik di Jawa Barat, Jawa Tengah, Jawa
+                                    Timur,
+                                    Sumut, NTT, dan Banten.</p>
+                                <span class="read-more">Baca Selengkapnya &rarr;</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
             <!-- Author View -->
             <div id="author-view" class="view-section">
                 <div class="info-card">
@@ -518,6 +670,14 @@
                 </svg>
                 <span>Info</span>
             </div>
+            <div class="nav-item" onclick="switchTab('news')">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z">
+                    </path>
+                </svg>
+                <span>Berita</span>
+            </div>
             <div class="nav-item" onclick="switchTab('author')">
                 <svg viewBox="0 0 24 24">
                     <path
@@ -527,145 +687,148 @@
                 <span>Author</span>
             </div>
         </div>
-    </div>
 
-    <script>
-        // --- Navigation Logic ---
-        function switchTab(tabName) {
-            // Update Nav Icons
-            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
-            const activeNavIndex = tabName === 'chat' ? 0 : tabName === 'info' ? 1 : 2;
-            document.querySelectorAll('.nav-item')[activeNavIndex].classList.add('active');
 
-            // Update Views
-            document.querySelectorAll('.view-section').forEach(view => view.classList.remove('active'));
-            document.getElementById(tabName + '-view').classList.add('active');
+        <script>
+            // --- Navigation Logic ---
+            function switchTab(tabName) {
+                // Update Nav Icons
+                document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+                const activeNavIndex = tabName === 'chat' ? 0 : tabName === 'info' ? 1 : tabName === 'news' ? 2 : 3;
+                document.querySelectorAll('.nav-item')[activeNavIndex].classList.add('active');
 
-            // Update Header
-            const title = document.getElementById('headerTitle');
-            const subtitle = document.getElementById('headerSubtitle');
-            if (tabName === 'chat') {
-                title.textContent = 'Edukator Gizi';
-                subtitle.textContent = 'Online • Siap Membantu';
-            } else if (tabName === 'info') {
-                title.textContent = 'Info Stunting';
-                subtitle.textContent = 'Data & Statistik';
-                renderChart(); // Render chart when tab is opened
-            } else {
-                title.textContent = 'Tentang Kami';
-                subtitle.textContent = 'Tim Pengembang';
+                // Update Views
+                document.querySelectorAll('.view-section').forEach(view => view.classList.remove('active'));
+                document.getElementById(tabName + '-view').classList.add('active');
+
+                // Update Header
+                const title = document.getElementById('headerTitle');
+                const subtitle = document.getElementById('headerSubtitle');
+                if (tabName === 'chat') {
+                    title.textContent = 'Edukator Gizi';
+                    subtitle.textContent = 'Online • Siap Membantu';
+                } else if (tabName === 'info') {
+                    title.textContent = 'Info Stunting';
+                    subtitle.textContent = 'Data & Statistik';
+                    renderChart(); // Render chart when tab is opened
+                } else if (tabName === 'news') {
+                    title.textContent = 'Berita Terkini';
+                    subtitle.textContent = 'Seputar Stunting';
+                } else {
+                    title.textContent = 'Tentang Kami';
+                    subtitle.textContent = 'Tim Pengembang';
+                }
             }
-        }
 
-        // --- Chart Logic ---
-        let chartInstance = null;
-        function renderChart() {
-            if (chartInstance) return; // Only render once
+            // --- Chart Logic ---
+            let chartInstance = null;
+            function renderChart() {
+                if (chartInstance) return; // Only render once
 
-            const ctx = document.getElementById('stuntingChart').getContext('2d');
-            chartInstance = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['2022', '2023', '2024', 'Target 2024'],
-                    datasets: [{
-                        label: 'Prevalensi Stunting (%)',
-                        data: [21.6, 21.5, 19.8, 14.0],
-                        borderColor: '#4A90E2',
-                        backgroundColor: 'rgba(74, 144, 226, 0.1)',
-                        borderWidth: 3,
-                        pointBackgroundColor: '#fff',
-                        pointBorderColor: '#4A90E2',
-                        pointRadius: 5,
-                        fill: true,
-                        tension: 0.4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false }
+                const ctx = document.getElementById('stuntingChart').getContext('2d');
+                chartInstance = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2022', '2023', '2024', 'Target 2024'],
+                        datasets: [{
+                            label: 'Prevalensi Stunting (%)',
+                            data: [21.6, 21.5, 19.8, 14.0],
+                            borderColor: '#4A90E2',
+                            backgroundColor: 'rgba(74, 144, 226, 0.1)',
+                            borderWidth: 3,
+                            pointBackgroundColor: '#fff',
+                            pointBorderColor: '#4A90E2',
+                            pointRadius: 5,
+                            fill: true,
+                            tension: 0.4
+                        }]
                     },
-                    scales: {
-                        y: {
-                            beginAtZero: false,
-                            min: 10,
-                            max: 25
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                min: 10,
+                                max: 25
+                            }
                         }
                     }
-                }
-            });
-        }
-
-        // --- Chat Logic ---
-        const chatMessages = document.getElementById('chatMessages');
-        const userInput = document.getElementById('userInput');
-        const sendBtn = document.getElementById('sendBtn');
-        const typingIndicator = document.getElementById('typingIndicator');
-
-        function generateUUID() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-            });
-        }
-
-        let sessionId = localStorage.getItem('stunting_agent_session_id');
-        if (!sessionId) {
-            sessionId = generateUUID();
-            localStorage.setItem('stunting_agent_session_id', sessionId);
-        }
-
-        function addMessage(text, sender) {
-            const div = document.createElement('div');
-            div.classList.add('message', sender);
-            div.innerHTML = text.replace(/\n/g, '<br>');
-            chatMessages.appendChild(div);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        async function sendMessage() {
-            const text = userInput.value.trim();
-            if (!text) return;
-
-            addMessage(text, 'user');
-            userInput.value = '';
-            userInput.disabled = true;
-            sendBtn.disabled = true;
-
-            typingIndicator.style.display = 'block';
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-
-            try {
-                const response = await fetch('/api/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ message: text, session_id: sessionId })
                 });
-
-                const data = await response.json();
-                typingIndicator.style.display = 'none';
-
-                if (data.error) {
-                    addMessage("Maaf, terjadi kesalahan: " + data.error, 'agent');
-                } else {
-                    addMessage(data.response, 'agent');
-                }
-            } catch (error) {
-                typingIndicator.style.display = 'none';
-                addMessage("Maaf, tidak dapat terhubung ke server.", 'agent');
-            } finally {
-                userInput.disabled = false;
-                sendBtn.disabled = false;
-                userInput.focus();
             }
-        }
 
-        sendBtn.addEventListener('click', sendMessage);
-        userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendMessage();
-        });
-    </script>
+            // --- Chat Logic ---
+            const chatMessages = document.getElementById('chatMessages');
+            const userInput = document.getElementById('userInput');
+            const sendBtn = document.getElementById('sendBtn');
+            const typingIndicator = document.getElementById('typingIndicator');
+
+            function generateUUID() {
+                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                    return v.toString(16);
+                });
+            }
+
+            let sessionId = localStorage.getItem('stunting_agent_session_id');
+            if (!sessionId) {
+                sessionId = generateUUID();
+                localStorage.setItem('stunting_agent_session_id', sessionId);
+            }
+
+            function addMessage(text, sender) {
+                const div = document.createElement('div');
+                div.classList.add('message', sender);
+                div.innerHTML = text.replace(/\n/g, '<br>');
+                chatMessages.appendChild(div);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+
+            async function sendMessage() {
+                const text = userInput.value.trim();
+                if (!text) return;
+
+                addMessage(text, 'user');
+                userInput.value = '';
+                userInput.disabled = true;
+                sendBtn.disabled = true;
+
+                typingIndicator.style.display = 'block';
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+
+                try {
+                    const response = await fetch('/api/chat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ message: text, session_id: sessionId })
+                    });
+
+                    const data = await response.json();
+                    typingIndicator.style.display = 'none';
+
+                    if (data.error) {
+                        addMessage("Maaf, terjadi kesalahan: " + data.error, 'agent');
+                    } else {
+                        addMessage(data.response, 'agent');
+                    }
+                } catch (error) {
+                    typingIndicator.style.display = 'none';
+                    addMessage("Maaf, tidak dapat terhubung ke server.", 'agent');
+                } finally {
+                    userInput.disabled = false;
+                    sendBtn.disabled = false;
+                    userInput.focus();
+                }
+            }
+
+            sendBtn.addEventListener('click', sendMessage);
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') sendMessage();
+            });
+        </script>
 
 </body>
 
