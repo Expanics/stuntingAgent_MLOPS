@@ -161,6 +161,8 @@
             background-color: var(--agent-msg-bg);
             color: var(--agent-msg-text);
             border-bottom-left-radius: 4px;
+            padding-bottom: 20px;
+            min-width: 80px;
         }
 
         .message.user {
@@ -169,6 +171,32 @@
             color: var(--user-msg-text);
             border-bottom-right-radius: 4px;
             box-shadow: 0 2px 5px rgba(74, 144, 226, 0.2);
+            padding-bottom: 20px;
+            /* Space for checkmarks */
+            min-width: 80px;
+        }
+
+        .message-status {
+            position: absolute;
+            bottom: 4px;
+            right: 8px;
+            font-size: 0.7em;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            opacity: 0.8;
+        }
+
+        .status-icon {
+            width: 14px;
+            height: 14px;
+            fill: #E3F2FD;
+            /* Light blue/whiteish for user message */
+        }
+
+        .status-icon.read {
+            fill: #68FFFA;
+            /* Cyan/Blueish for read status */
         }
 
         .chat-input-area {
@@ -782,7 +810,29 @@
             function addMessage(text, sender) {
                 const div = document.createElement('div');
                 div.classList.add('message', sender);
-                div.innerHTML = text.replace(/\n/g, '<br>');
+
+                let content = text.replace(/\n/g, '<br>');
+
+                // Add checkmarks for user messages
+                if (sender === 'user') {
+                    content += `
+                        <div class="message-status">
+                            <span class="time">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                            <svg class="status-icon read" viewBox="0 0 24 24">
+                                <path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"></path>
+                            </svg>
+                        </div>
+                    `;
+                } else {
+                    // Add time for agent messages too
+                    content += `
+                        <div class="message-status" style="color: #888;">
+                            <span class="time">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                        </div>
+                    `;
+                }
+
+                div.innerHTML = content;
                 chatMessages.appendChild(div);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }
@@ -812,7 +862,20 @@
                     if (data.error) {
                         addMessage("Maaf, terjadi kesalahan: " + data.error, 'agent');
                     } else {
-                        addMessage(data.response, 'agent');
+                        // Split response by double newlines (paragraphs)
+                        const paragraphs = data.response.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+
+                        for (let i = 0; i < paragraphs.length; i++) {
+                            // Show typing indicator before each subsequent message (optional, but nice)
+                            if (i > 0) {
+                                typingIndicator.style.display = 'block';
+                                chatMessages.scrollTop = chatMessages.scrollHeight;
+                                await new Promise(resolve => setTimeout(resolve, 600)); // Wait 600ms
+                                typingIndicator.style.display = 'none';
+                            }
+
+                            addMessage(paragraphs[i].trim(), 'agent');
+                        }
                     }
                 } catch (error) {
                     typingIndicator.style.display = 'none';

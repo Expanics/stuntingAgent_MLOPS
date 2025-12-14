@@ -83,7 +83,8 @@ Jawab pertanyaan user secara langsung berdasarkan DATA PENDUKUNG dan RIWAYAT PER
         
     except Exception as e:
         print(f"Error processing request: {e}")
-        return jsonify({"error": str(e)}), 500
+        # Return user-friendly error message for API/Quota issues
+        return jsonify({"response": "Maaf, sedang ada gangguan koneksi ke server. (Code: 1)"})
 
 if __name__ == '__main__':
     # Use PORT environment variable for Railway, default to 8080 for local
