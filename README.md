@@ -2,9 +2,9 @@
 
 ## 📝 Abstraksi
 
-Stunting masih menjadi masalah kesehatan masyarakat yang mendesak di Indonesia. Meskipun prevalensi stunting telah turun menjadi **19.8% pada tahun 2024**, angka ini masih perlu ditekan untuk mencapai target pemerintah sebesar 14%. Stunting tidak hanya berdampak pada pertumbuhan fisik, tetapi juga perkembangan kognitif anak, yang pada akhirnya mempengaruhi kualitas Sumber Daya Manusia (SDM) Indonesia di masa depan.
+Stunting masih menjadi masalah kesehatan masyarakat yang mendesak di Indonesia. Meskipun prevalensi stunting telah turun menjadi 19.8% pada tahun 2024, angka ini masih perlu ditekan untuk mencapai target pemerintah sebesar 14%. Stunting tidak hanya berdampak pada pertumbuhan fisik, tetapi juga perkembangan kognitif anak, yang pada akhirnya mempengaruhi kualitas Sumber Daya Manusia (SDM) Indonesia di masa depan.
 
-Proyek **Stunting Agent** ini dikembangkan sebagai solusi berbasis Artificial Intelligence (AI) untuk memberikan edukasi yang mudah diakses mengenai pencegahan stunting dan rekomendasi gizi yang terjangkau.
+Proyek Stunting Agent ini dikembangkan sebagai solusi berbasis Artificial Intelligence (AI) untuk memberikan edukasi yang mudah diakses mengenai pencegahan stunting dan rekomendasi gizi yang terjangkau.
 
 ### 🌍 Kontribusi pada SDGs
 Proyek ini mendukung **Sustainable Development Goals (SDGs)** PBB:
@@ -12,7 +12,7 @@ Proyek ini mendukung **Sustainable Development Goals (SDGs)** PBB:
 *   **SDG 3: Good Health and Well-being (Kehidupan Sehat dan Sejahtera)** - Menjamin kehidupan yang sehat dan meningkatkan kesejahteraan bagi semua usia.
 
 ### 🎓 Konteks Akademis
-Aplikasi ini dibuat untuk memenuhi Tugas Akhir Mata Kuliah **Machine Learning Operations (MLOps)** pada **Semester 3** di **Binus University**. Proyek ini mendemonstrasikan penerapan siklus hidup ML (Machine Learning Lifecycle), mulai dari manajemen data, pengembangan model RAG (Retrieval-Augmented Generation), hingga deployment aplikasi berbasis container.
+Aplikasi ini dibuat untuk memenuhi Tugas Akhir Mata Kuliah **Machine Learning Operations (MLOps)** pada Semester 3 di Binus University. Proyek ini mendemonstrasikan penerapan siklus hidup ML (Machine Learning Lifecycle), mulai dari manajemen data, pengembangan model RAG (Retrieval-Augmented Generation), hingga deployment aplikasi berbasis container.
 
 ---
 
@@ -55,7 +55,6 @@ Salinan AOL_MLPOPS/
 ### 1. Clone Repository
 ```bash
 git clone <repository-url>
-cd "Salinan AOL_MLPOPS"
 ```
 
 ### 2. Setup Environment
